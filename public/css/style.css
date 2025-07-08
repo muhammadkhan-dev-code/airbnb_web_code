@@ -1,0 +1,249 @@
+/* Base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #f7f7f7 !important;
+  height: 22vh;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn:hover {
+  filter: brightness(110%);
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2.5rem;
+}
+
+/* Footer */
+.f-info {
+  background-color: rgb(230, 229, 229);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+  flex-wrap: wrap;
+  height: 6rem;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.35rem;
+  margin-right: 0.50rem;
+  padding-top: 0.40rem;
+}
+
+/* Card Styles */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 1rem;
+  width: 20vw;
+}
+
+.card-img-top {
+  width: 100% !important;
+  height: 15rem !important;
+  border-radius: 25px !important;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 500 !important;
+}
+
+.card-img-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1rem;
+}
+
+.card-img-overlay .text-span {
+  background-color: rgb(232, 230, 230);
+  font-size: 18px;
+  border: 2px solid white;
+  border-radius: 5rem;
+  padding: 4px 12px;
+  font-weight: 500 !important;
+}
+
+.add-btn {
+  background-color: #fe424d !important;
+  padding: 0.5rem 3rem !important;
+  border: none !important;
+}
+
+/* Show page image */
+.show-image {
+  height: 30vh;
+  border-radius: 5px !important;
+}
+
+.show-btns {
+  display: flex;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Map styling */
+#map {
+  height: 600px;
+  width: 70vw;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 60vw;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-segment {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 0;
+}
+
+.search-segment:hover {
+  background-color: #f1f3f5;
+  border-radius: 40px;
+}
+
+.search-segment + .search-segment {
+  border-left: 1px solid #dee2e6;
+}
+
+.segment-label {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #343a40;
+  user-select: none;
+}
+
+.segment-placeholder {
+  font-weight: 400;
+  color: rgb(40, 37, 37);
+  font-size: 1.2rem;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Search Button */
+.search-button {
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #e82c3f;
+}
+
+.search-button svg {
+  fill: white;
+  width: 22px;
+  height: 22px;
+}
+
+/* Responsive Search Bar */
+@media (max-width: 992px) {
+  .search-bar {
+    flex-direction: column;
+    border-radius: 30px;
+    width: 90vw;
+  }
+
+  .search-segment {
+    width: 100%;
+    border-left: none !important;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .search-segment:first-child {
+    border-top: none;
+  }
+
+  .search-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

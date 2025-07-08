@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm sticky-top py-3 ">
+  <div class="container-fluid d-flex flex-column">
+    <!-- Top Nav Row -->
+    <div class="w-100 d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <a class="navbar-brand   d-flex align-items-center gap-1" href="/listings">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg" alt="logo" height="45">
+      </a>
+
+      <!-- Nav items center -->
+      <ul class="navbar-nav mx-auto d-none d-lg-flex flex-row gap-4">
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="Home" width="33"> Homes
+          </a>
+        </li>
+        <li class="nav-item position-relative">
+          <a class="nav-link text-dark fw-semibold" href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Experience" width="33"> Experiences
+            <span class="badge bg-primary position-absolute top-0 start-100 translate-middle rounded-pill">NEW</span>
+          </a>
+        </li>
+        <li class="nav-item position-relative">
+          <a class="nav-link text-dark fw-semibold" href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/664/664468.png" alt="Service" width="33"> Services
+            <span class="badge bg-primary position-absolute top-0 start-100 translate-middle rounded-pill">NEW</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Right side buttons -->
+      <div class="d-flex align-items-center gap-2">
+        <a class="nav-item nav-link px-2 text-dark fw-medium" href="/listings/new">Airbnb your home</a>
+        <% if (!currentUser) { %>
+          <a class="btn btn-outline-success px-3 py-1 fw-semibold" href="/signup">Signup</a>
+          <a class="btn btn-success px-3 py-1 fw-semibold" href="/login">Login</a>
+        <% } else { %>
+          <a class="btn btn-danger px-3 py-1 fw-semibold" href="/logout">Logout</a>
+        <% } %>
+      </div>
+    </div>
+
+    <!-- Search Bar (Second Row) -->
+    <div class="w-100 d-flex justify-content-center mt-3 px-3">
+      <div class="search-bar d-flex align-items-center shadow-sm">
+        <div class="search-segment">
+          <span class="segment-label">Where</span>
+          <span class="segment-placeholder">Search destinations</span>
+        </div>
+        <div class="search-segment">
+          <span class="segment-label">Check in</span>
+          <span class="segment-placeholder">Add dates</span>
+        </div>
+        <div class="search-segment">
+          <span class="segment-label">Check out</span>
+          <span class="segment-placeholder">Add dates</span>
+        </div>
+        <div class="search-segment">
+          <span class="segment-label">Who</span>
+          <span class="segment-placeholder">Add guests</span>
+        </div>
+        <button class="search-button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16a6.471 6.471 0 004.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
